@@ -1,0 +1,15 @@
+y***************
+**Report One for Assignment 1
+**Course: p436
+**date created: 1/19/2018
+**date modified: 1/19/2018
+
+
+Question 1:
+	 ~What are Orphan and Zombie processes?~
+	 * A Zombie is a type of "child" process that is created when the parent call does not use the "wait()"syst	     em call when it is created. They are created because the parent process just adds the zombie process to t          he process table, but it does not execute in the right order because the parent does not wait for it to r          un processes before it exits().So Zombies are jsut in the process table, but never get exicuted Zombies a          re bad because they can fill up the process table and can prevent other processes from running.
+
+	  *An Orphan process are ones that are left by the parent because the parent process exits before the orpha	     n is finished running. The difference between a zombie and an orphan is that a zombie does not execute, a		nd an orphan is mid-execution when the parent exits.
+
+	  ~What are the changes that occur when the child process calls the exec system call to the execute a new p	     rogram~
+	  *The child process executes the exec, while the parent process waits for it to finish. The changes would 	     be to the process schedule because since the child is the active process, it will cause the changes to me          mory possible, because of the process the child is executing. 

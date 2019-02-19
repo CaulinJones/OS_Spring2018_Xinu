@@ -1,0 +1,18 @@
+******************
+**Reaport_2.txt
+**By: Caulin Jones
+**Date Created: 2/3/2018 
+**
+
+QUESTION 1:
+FIRST THING: I learned that the create call will start a new process, but you must be very specific with what data you try to pass to to the new pprocess for mthe parent process.
+SECOND THING:  I learned a bit on how to implament semiphores, I am stil in the dark on how they actuallly operate, but I understand a few of the mechanism of how they communicate wiht processes.
+
+QUESTION 2:
+I made a mistake in how to check the status of the countdown status in the parent process. I had to create a way to theck the output of each decremendation.
+
+I also tried to use the produce, consumer process model to complete to pulling impelementation which was bad. I then tried to create a single countdown process function to deal with the multiple processes.
+
+QUESTION 3:
+I would try to of developed a better conceptual plan of attack to really understand the system instead of just experamenting with the code given in the assignent until I understood what code performed what function.
+

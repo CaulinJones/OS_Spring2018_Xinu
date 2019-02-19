@@ -1,0 +1,38 @@
+#include <xinu.h>
+#include <stdio.h>
+
+
+struct qentry_ll{
+  int32 qkey;
+  pid32 pid;
+  struct  qentry_ll *qnext;
+  struct qentry_ll *qprev;
+
+};
+
+struct qentry_ll *queuehead;
+
+pid32 insert_ll(struct qentry_ll *q, pid32 pid, int32 key){
+  queuehead = q;
+  struct qentry_ll *cur = queuehead;
+  struct qentry_ll* new = (struct qentry_ll *) getmem(sizeof(struct qentry_ll));
+  struct qentry_ll *ptNew = &new;
+  new->qkey = key;
+  new->pid = pid;
+  while(cur->qkey <= new->qkey ){
+    cur = cur->qnext;
+  }
+  new->qnext = cur->qnext;
+  new->qprev = cur;
+  cur->qnext = ptNew;
+  return new->pid;
+}
+
+pid32 pop_ll(struct qentry_ll *q){
+  queuehead = q;
+  pid32 out = queuehead->pid;
+  freemem(queuehead,sizeof(struct qentry_ll ));
+    return out;
+
+
+}
